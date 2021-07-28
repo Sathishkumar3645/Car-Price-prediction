@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Specifications_price</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ccc;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 15px;
+ 
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+div {
+
+  float: left;
+  width: 20%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  margin: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#button
+  {
+        height:50px;
+        width:200px;
+   }
+.rightdiv
+         {
+         float: right;
+         width: 79%;
+         height:100%;
+         outline: thick ridge black;
+         }
+ .myDiv {
+  float:left; 
+  width:90%;
+   height:40%;
+  border: 5px outset grey;
+  background-color: white;   
+margin-bottom: 16px; 
+  }
+#button {
+   border-radius: 12px;
+}
+ 
+#emi{
+   font-size: 15px;
+   float: right;
+   background-color: lightblue;
+  padding:5px;
+} 
+#predict{
+   font-size: 15px;
+   
+   background-color:#47d1d1;
+    padding:5px;
+   text-decoration:none;
+} 
+
+#anchor
+{
+
+font-size:25px;
+ color:black;
+ text-decoration:none;
+ background-color: lightblue;
+}
+
+.div1{
+outline: thick ridge black;
+height:100%
+ width:30%;
+
+}
+
+</style>
+
+<script language="javascript">
+function SelectRedirect(){
+
+
+switch(document.getElementById('s1').value)
+{
+case "below 5":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#0";
+break;
+
+case "5-10":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#5";
+break;
+
+case "10-15":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#10";
+break;
+
+case "15-20":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#15";
+break;
+
+case "20-30":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#20";
+break;
+
+case "30-40":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#30";
+break;
+
+case "40-50":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#40";
+break;
+
+
+default:
+window.location="file:///C:/Users/ADMIN/Desktop/CIP%20HTML/new.html"; break;
+}// end of switch 
+}
+
+//////////////////
+function validate(){
+  const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs =document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#0";
+                    break;
+                }
+               else
+                  {
+                        window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#30";
+                    break;   
+                   }
+            }
+            
+        };
+
+}
+
+
+
+function SelectRedirect1(){
+
+
+switch(document.getElementById('s2').value)
+{
+case "Maruti":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#1";
+break;
+
+case "Hyundai":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#2";
+break;
+
+case "Honda":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#3";
+break;
+
+case "Tata":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#4";
+break;
+
+case "Mahindra":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#5";
+break;
+
+case "Renault":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#6";
+break;
+
+case "Ford":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#7";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; 
+break;
+}// end of switch 
+}
+
+
+function SelectRedirect2(){
+
+
+switch(document.getElementById('s3').value)
+{
+case "Swift":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#11";
+break;
+
+case "Ignis":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#12";
+break;
+
+case "Ciaz":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#13";
+break;
+
+case "Wagon":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#14";
+break;
+
+case "Vitarra Breeza":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#15";
+break;
+
+case "S presso ":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#16";
+break;
+
+case "Celerio":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#17";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; 
+break;
+}// end of switch 
+}
+
+function SelectRedirect2(){
+
+
+switch(document.getElementById('s3').value)
+{
+case "Below 15":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#1";
+break;
+
+case "15-20":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#2";
+break;
+
+case "20-25":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#3";
+break;
+
+case "25-30":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#4";
+break;
+
+case "30-35":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#5";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; 
+break;
+}// end of switch 
+}
+
+function SelectRedirect11(){
+
+
+switch(document.getElementById('p1').value)
+{
+case "Hatchback":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#1";
+break;
+
+case "Sedan":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#2";
+break;
+
+case "SUV":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#3";
+break;
+
+case "MUV":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#4";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html"; 
+break;
+}// end of switch 
+}
+</script>
+</head>
+<body>
+
+
+
+<header>
+<img src="header.jpeg" alt="sorry" width="400" height="150" align="left">  
+<h2>Specifications(Price)</h2>
+<a id="predict" href="http://127.0.0.1:5000/">PREDICT USED CAR PRICE</a>
+</header>
+
+
+  <div class="div1" >
+  <left><h3>Filter your Search</h3></left>
+<left><h3>By Price</h3></left>
+<SELECT id="s1" NAME="section" onChange="SelectRedirect();">
+<Option value="">Select Price Range</option>
+<Option value="below 5">Below 5 lakhs</option>
+<Option value="5-10">5-10 lakhs</option>
+<Option value="10-15">10-15 lakhs</option>
+<Option value="15-20">15-20 lakhs</option>
+<Option value="20-30">20-30 lakhs</option>
+<Option value="30-40">30-40 lakhs</option>
+<Option value="40-50">40-50 lakhs</option>
+</SELECT>
+
+<left><h3>By Fuel Type</h3></left>
+<form>
+        <input type="radio" name="choice" value="petrol"> Petrol<br>
+        <input type="radio" name="choice" value="diesel"> Diesel<br>
+        <input type="button" id="btn" value="Search">
+    </form>
+    <script>
+        const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs =document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_fuel.html#11";
+                    break;
+                }
+               else
+                  {
+                        window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_fuel.html#22";
+                    break;   
+                   }
+            }
+            
+        };
+    </script>
+
+
+<left><h3>By Brand</h3></left>
+<SELECT id="s2" NAME="section" onChange="SelectRedirect1();">
+<Option value="">Select Brand Name</option>
+<Option value="Maruti">Maruti</option>
+<Option value="Hyundai">Hyundai</option>
+<Option value="Honda">Honda</option>
+<Option value="Tata">Tata</option>
+<Option value="Mahindra">Mahindra</option>
+<Option value="Renault">Renault</option>
+<Option value="Ford">Ford</option>
+</SELECT>
+
+<left><h3>By Mileage</h3></left>
+<SELECT id="s3" NAME="section" onChange="SelectRedirect2();">
+<Option value="">Select Mileage Range</option>
+<Option value="Below 15">Below 15kmpl</option>
+<Option value="15-20">15-20 kmpl</option>
+<Option value="20-25">20-25kmpl</option>
+<Option value="25-30">25-30kmpl</option>
+<Option value="30-35">30-35km/kg</option>
+</SELECT>
+
+<left><h3>By Body Type</h3></left>
+<SELECT id="p1" NAME="section" onChange="SelectRedirect11();">
+<Option value="">Select Body Type</option>
+<Option value="Hatchback">Hatchback</option>
+<Option value="Sedan">Sedan</option>
+<Option value="SUV">SUV</option>
+<Option value="MUV">MUV</option>
+</SELECT>
+
+    
+</div>
+
+  <div class="rightdiv">
+<div class="myDiv">
+  <Center><h3 >Below 5 lakhs</h3></Center>
+</div>
+    <div class="myDiv">
+      <img id="1" src="renault kwid.jpeg" alt="renault kwid" width="200" height="150" align="left"></td>
+     <td><h3>Renault kwid<br>Price: 3.18 - 5.39 Lakh</h3><br>Engine: 799cc-999cc<br>Mileage: 20.71-22.3kmpl<br>Fuel Type: Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+    </div>
+ <div class="myDiv">
+   <img  id="2" src="tata tiago.jpeg" alt="tata tiago" width="200" height="150" align="left"></td>
+  <td><h3>Tata tiago<br>Price: 4.99 - 6.95 Lakh </h3><br>Engine:1199cc<br>Mileage:16.04-23.84<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+  <img id="3" src="maruti suzuki swift.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki swift<br>Price: 5.73 Lakh</h3><br>Engine:1197cc<br>Mileage:23.76kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+   <img id="4" src="hyundai grand i10.jpeg" alt="hyundai" width="200" height="150" align="left"></td>
+  <td><h3>Hyundai grand i10<br>Price: 4.97 Lakh</h3><br>Engine:1197cc<br>Mileage:15.0-17.0<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+   <img id="5" src="maruti suzuki ignis.jpeg" alt="maruti suzuki ignis" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki ignis<br>Price: 4.95 - 7.36 Lakh</h3><br>Engine:1197 cc<br>Mileage:14.65-20.89kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+   <img id="6"src="maruti suzuki spresso.jpeg" alt="maruti suzuki spresso" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki spresso<br>Price: 3.78 - 5.26 Lakh </h3><br>Engine:998cc<br>Mileage:31.2km/kg<br>Fuel_Type:CNG<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>5 to 10 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="7" src="maruti suzuki celerio.jpeg" alt="maruti suzuki celerio" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki celerio<br>Price: 4.65 - 5.90 Lakh</h3><br>Engine:998cc<br>Mileage:30.47km/kg<br>Fuel_Type:CNG<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="8" src="toyota urban cruiser.jpeg" alt="toyota urban cruiser" width="200" height="150" align="left"></td>
+  <td><h3>Toyota urban cruiser<br>Price: 8.50 - 11.35 Lakh</h3><br>Engine:1462cc<br>Mileage:18.76kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+  <img id="9" src="maruti suzuki ciaz.jpeg" alt="maruti suzuki ciaz" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki ciaz<br>Price: 8.52 - 11.50 Lakh</h3><br>Engine:1462cc<br>Mileage:20.04kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="10" src="hyundai verna.jpeg" alt="hyundai verna" width="200" height="150" align="left"></td>
+  <td><h3>Hyundai verna<br>Price: 9.19 - 15.25 Lakh</h3><br>Engine:1368cc<br>Mileage:16.0-19.1kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="11" src="honda amaze.jpeg" alt="honda amaze" width="200" height="150" align="left"></td>
+  <td><h3>Honda amaze<br>Price: 6.22 - 9.99 Lakh</h3><br>Engine:1498cc<br>Mileage:21.0kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="12" src="maruti suzuki wagon.jpeg" alt="maruti suzuki wagon" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki wagon<br>Price: 4.80 - 6.33 Lakh</h3><br>Engine:998cc-1197cc<br>Mileage:20.52-21.79kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>10 to 15 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="13" src="mahindra thar.jpeg" alt="mahindra thar" width="200" height="150" align="left"></td>
+  <td><h3>Mahindra thar<br>Price: 10.01 Lakh</h3><br>Engine:1149cc<br>Mileage:15.2kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="14" src="mahindra xuv500.jpeg" alt="mahindra xuv500" width="200" height="150" align="left"></td>
+  <td><h3>Mahindra xuv500<br>Price: 15.48 - 20.00 Lakh</h3><br>Engine:2179cc<br>Mileage:15.1kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="15" src="renault duster.jpeg" alt="renault duster" width="200" height="150" align="left"></td>
+  <td><h3>Renault duster<br>Price: 9.73 - 14.12 Lakh</h3><br>Engine:1330cc<br>Mileage:16.42kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="16" src="mahindra scorpio.jpeg" alt="mahindra scorpio" width="200" height="150" align="left"></td>
+  <td><h3>Mahindra scorpio<br>Price: 12.51 - 17.20 Lakh</h3><br>Engine:2179cc<br>Mileage:14kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+ <img id="17" src="maruti suzuki vitara brezza.jpeg" alt="maruti suzuki vitara brezza" width="200" height="150" align="left"></td>
+  <td><h3>Maruti suzuki vitara brezza<br>Price: 7.51 - 11.41 Lakh</h3><br>Engine:1462cc<br>Mileage:18.76kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="18" src="ford ecosport.jpeg" alt="ford ecosport" width="200" height="150" align="left"></td>
+  <td><h3>Ford ecosport<br>Price: 8.19 - 11.69 Lakh</h3><br>Engine:1498cc<br>Mileage:21.7kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>15 to 20 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="19" src="toyota innova crysta.jpeg" alt="toyota innova crysta" width="200" height="150" align="left"></td>
+  <td><h3>Toyota innova crysta<br>Price: 16.52 - 24.59 Lakh</h3><br>Engine:2393cc<br>Mileage:11-16kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="20" src="tata harrier.jpeg" alt="tata harrier" width="200" height="150" align="left"></td>
+  <td><h3>Tata harrier<br>Price: 13.99 - 20.81 Lakh</h3><br>Engine:1956cc<br>Mileage:17.0kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="21" src="kia seltos.jpeg" alt="kia seltos" width="200" height="150" align="left"></td>
+  <td><h3>Kia seltos<br>Price: 9.95 - 17.65 Lakh </h3><br>Engine:1493cc<br>Mileage:17.8kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="22" src="mg hector.jpeg" alt="mg hector" width="200" height="150" align="left"></td>
+  <td><h3>MG hector<br>Price: 13.17 - 18.85 Lakh</h3><br>Engine1956cc:<br>Mileage:12-17kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="23" src="tata safari.jpeg" alt="tata safari" width="200" height="150" align="left"></td>
+  <td><h3>Tata safari<br>Price: 14.99 - 21.81 Lakh </h3><br>Engine:1956cc<br>Mileage:16.14 kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="24"src="hyuandai elantra.jpeg" alt="hyuandai elantra" width="200" height="150" align="left"></td>
+  <td><h3>Hyundai elantra<br>Price: 17.85 - 21.12 Lakh </h3><br>Engine:1493cc<br>Mileage:14.62kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>20 to 30 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="25" src="hyundai tucson.jpeg" alt="hyundai tucson" width="200" height="150" align="left"></td>
+  <td><h3>Hyundai tucson<br>Price: 22.57 - 27.35 Lakh </h3><br>Egine:1999cc<br>Mileage:12.95 - 15.38 Kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="26" src="jeep compass.jpeg" alt="jeep compass" width="200" height="150" align="left"></td>
+  <td><h3>Jeep compass<br>Price: 16.99 - 28.29 Lakh</h3><br>Emgine:1995cc<br>Mileage:15.38kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="27" src="kia carnival.jpeg" alt="kia carnival" width="200" height="150" align="left"></td>
+  <td><h3>Kia carnival<br>Price: s.24.95 - 33.95 Lakh</h3><br>Engine:2199cc<br>Mileage:14.11kmpl<br>Fuel_Type:Diesel</td>
+  <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td> 
+</div>
+<div class="myDiv">
+ <img id="28" src="volkswagen t-roc.jpeg" alt="volkswagen t-roc" width="200" height="150" align="left"></td>
+  <td><h3>Volkswagen t-roc<br>Price: 21.35 Lakh</h3><br>Engine:1498cc<br>Mileage:18.4<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="29" src="citrogen c5.jpeg" alt="citrogen c5" width="200" height="150" align="left"></td>
+  <td><h3>Citrogen c5<br>Price: 29.90 - 31.90 Lakh</h3><br>Engine:1997cc<br>Mileage:18.6kmpl<br>Fuel_Type:Diesel<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="30" src="nissan teana.jpeg" alt="nissan teana" width="200" height="150" align="left"></td>
+  <td><h3>Nissan teana<br>Price: 21.14- 24.89 Lakh</h3><br>Engine:2496cc<br>Mileage:11.07kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>30 to 40 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="31"  src="skoda superb.jpeg" alt="skoda superb" width="200" height="150" align="left"></td>
+  <td><h3>Skoda New superb<br>Price: 31.99 - 34.99 Lakh</h3><br>Engine:1984cc<br>Mileage:15.1kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+ <img id="32" src="skoda octavia.jpeg" alt="skoda octavia" width="200" height="150" align="left"></td>
+  <td><h3>Skoda octavia<br>Price: 35.99 Lakh</h3><br>Engine:1984cc<br>Mileage:14.72kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="33"  src="mini cooper.jpeg" alt="mini cooper" width="200" height="150" align="left"></td>
+  <td><h3>Mini cooper<br>Price: 40.10 Lakh</h3><br>Engine:1598cc<br>Mileage:15.6kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="34" src="mini countryman.jpeg" alt="mini countryman" width="200" height="150" align="left"></td>
+  <td><h3>Mini countryman<br>Price: 39.50 - 43.40 Lakh</h3><br>Engine:1998cc<br>Mileage:14.34kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+  <img id="35" src="bmw 2 series.jpeg" alt="bmw 2 series" width="200" height="150" align="left"></td>
+  <td><h3>Bmw 2 series Sportline<br>Price: 37.90 - 42.30 Lakh</h3><br>Engine:1998cc<br>Mileage:18.64kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+  <img id="36" src="mercedes benz.jpeg" alt="mercedes benz" width="200" height="150" align="left"></td>
+  <td><h3>Mercedes benz A-Class<br>Price: 39.90 - 46.24 Lakh</h3><br>Engine:1595cc<br>Mileage:15.5kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<center><h3>40 to 50 lakhs</h3><center>
+</div>
+<div class="myDiv">
+<img id="37" src="bmw 3 series.jpeg" alt="bmw 3 series" width="200" height="150" align="left"></td>
+<td><h3>Bmw 3 series<br>Price: 42.60 - 62.90 Lakh</h3><br>Engine:2998cc<br>Mileage:11.86kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+ <img id="38" src="audi a4.jpeg" alt="audi a4" width="200" height="150" align="left"></td>
+  <td><h3>Audi a4<br>Price: 42.34 - 46.67 Lakh</h3><br>Engine:1998cc<br>Mileage:17.42kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>   
+</div>
+<div class="myDiv">
+<img id="39" src="audi q2.jpeg" alt="audi q2" width="200" height="150" align="left"></td>
+  <td><h3>Audi q2<br>Price: 44.99 - 48.89 Lakh</h3><br>Emgine:1984cc<br>Mileage:15kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+<img id="40" src="jaguar xe.jpeg" alt="jaguar xe" width="200" height="150" align="left"></td>
+  <td><h3>Jaguar xe<br>Price: 46.64 - 48.50 Lakh</h3><br>Engine:1997cc<br>Mileage:12.66 kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+ <img id="41" src="mini clubman.jpeg" alt="mini clubman" width="200" height="150" align="left"></td>
+  <td><h3>Mini clubman<br>Price: 41.20 Lakh</h3><br>Engine:1998cc<br>Mileage:13.79kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+<div class="myDiv">
+  <img id="42" src="honda accord.jpeg" alt="honda accord" width="200" height="150" align="left"></td>
+  <td><h3>Honda accord<br>Price: 38.00 Lakh - 43.21 Lakh</h3><br>Engine:3471cc<br>Mileage:10.7kmpl<br>Fuel_Type:Petrol<br>
+   <a id="anchor" href="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/emi.html">Calculate EMI</a></td>
+</div>
+
+
+</div>
+</div>
+
+</section>
+</body>
+</html>

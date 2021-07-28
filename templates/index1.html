@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Car List</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ccc;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 15px;
+ 
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+div {
+
+  float: left;
+  width: 20%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  margin: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each
+
+other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#button
+  {
+        height:50px;
+        width:200px;
+   }
+.rightdiv
+         {
+         float: right;
+         width: 79%;
+         height:100%;
+         outline: thick ridge black;
+         }
+ .myDiv {
+  float:left;
+  width:100%;
+   height:40%;
+  border: 5px outset grey;
+  background-color: white;  
+margin-bottom: 16px;
+  }
+#button {
+   border-radius: 12px;
+}
+ 
+#emi{
+   font-size: 15px;
+   float: right;
+   background-color: lightblue;
+  padding:5px;
+text-decoration:none;
+}
+#anchor
+{
+
+font-size:25px;
+ color:black;
+ text-decoration:none;
+ background-color: lightblue;
+}
+
+.div1{
+outline: thick ridge black;
+height:100%
+ width:30%;
+
+}
+ #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+       
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+       
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+       
+        #fuel:hover {
+            background-color: coral;
+        }
+       
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+       
+        #research:hover {
+            background-color: coral;
+        }
+       
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+       
+        #resea:hover {
+            background-color: coral;
+        }
+       
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+       
+        #sub:hover {
+            background-color: darkcyan;
+        }
+       
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+       
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+       
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+       
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+   
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+<header>
+    
+     <h2>Cars at your Price</h2>
+     
+</header>
+
+
+
+<div class="myDiv">
+<center>
+<h2 style="color:#bf4080"> LIST OF CARS AT YOUR PRICE </h2>
+ 
+     
+     
+      <br><br>
+      <table border = 1>
+         <thead>
+            <td>Car Name</td>
+            <td>Price(in lakhs)</td>
+           
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               
+            </tr>
+         {% endfor %}
+      </table>
+ <br><br>  
+
+</form>   
+
+
+</div>
+   
+ 
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>New Cars</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ccc;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 15px;
+ 
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+div {
+
+  float: left;
+  width: 20%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  margin: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#button
+  {
+        height:50px;
+        width:200px;
+   }
+.rightdiv
+         {
+         float: right;
+         width: 79%;
+         height:100%;
+         outline: thick ridge black;
+         }
+ .myDiv {
+  float:left; 
+  width:90%;
+   height:40%;
+  border: 5px outset grey;
+  background-color: white;   
+margin-bottom: 16px; 
+  }
+#button {
+   border-radius: 12px;
+}
+ 
+#emi{
+   font-size: 15px;
+   float: right;
+   background-color:tomato;
+    padding:5px;
+   text-decoration:none;
+} 
+
+#predict{
+   font-size: 15px;
+   
+   background-color:#47d1d1;
+    padding:5px;
+   text-decoration:none;
+} 
+
+#anchor
+{
+
+font-size:25px;
+ color:black;
+ text-decoration:none;
+ background-color: lightblue;
+}
+
+.div1{
+outline: thick ridge black;
+height:100%
+ width:30%;
+
+}
+
+</style>
+
+<script language="javascript">
+function SelectRedirect(){
+
+
+switch(document.getElementById('s1').value)
+{
+case "below 5":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#0";
+break;
+
+case "5-10":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#5";
+break;
+
+case "10-15":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#10";
+break;
+
+case "15-20":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#15";
+break;
+
+case "20-30":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#20";
+break;
+
+case "30-40":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#30";
+break;
+
+case "40-50":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#40";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; break;
+}// end of switch 
+}
+
+//////////////////
+function validate(){
+  const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs =document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#0";
+                    break;
+                }
+               else
+                  {
+                        window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/price.html#30";
+                    break;   
+                   }
+            }
+            
+        };
+
+}
+
+
+
+function SelectRedirect1(){
+
+
+switch(document.getElementById('s2').value)
+{
+case "Maruti":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#1";
+break;
+
+case "Hyundai":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#2";
+break;
+
+case "Honda":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#3";
+break;
+
+case "Tata":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#4";
+break;
+
+case "Mahindra":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#5";
+break;
+
+case "Renault":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#6";
+break;
+
+case "Ford":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_brand.html#7";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; break;
+}// end of switch 
+}
+
+function SelectRedirect2(){
+
+
+switch(document.getElementById('s3').value)
+{
+case "Below 15":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#1";
+break;
+
+case "15-20":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#2";
+break;
+
+case "20-25":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#3";
+break;
+
+case "25-30":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#4";
+break;
+
+case "30-35":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_mileage.html#5";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/new.html"; 
+break;
+}// end of switch 
+}
+
+function SelectRedirect11(){
+
+
+switch(document.getElementById('p1').value)
+{
+case "Hatchback":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#1";
+break;
+
+case "Sedan":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#2";
+break;
+
+case "SUV":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#3";
+break;
+
+case "MUV":
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html#4";
+break;
+
+
+default:
+window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_body.html"; 
+break;
+}// end of switch 
+}
+
+</script>
+</head>
+<body>
+
+
+
+<header>
+     <img src="header.jpeg" alt="sorry" width="400" height="150" align="left">  
+     <h2>Buy New Cars</h2>
+     <a id="emi" href="emi.html">EMI CALCULATION</a>
+     <a id="predict" href="http://127.0.0.1:5000/">PREDICT USED CAR PRICE</a>
+</header>
+
+
+ <div class="div1" >
+    <center><h3>Filter your Search</h3></center>
+    <left><h3>By Price</h3></left>
+   <SELECT id="s1" NAME="section" onChange="SelectRedirect();">
+    <Option value="">Select Price Range</option>
+    <Option value="below 5">Below 5 lakhs</option>
+    <Option value="5-10">5-10 lakhs</option>
+    <Option value="10-15">10-15 lakhs</option>
+    <Option value="15-20">15-20 lakhs</option>
+    <Option value="20-30">20-30 lakhs</option>
+    <Option value="30-40">30-40 lakhs</option>
+    <Option value="40-50">40-50 lakhs</option>
+  </SELECT>
+
+<left><h3>By Fuel Type</h3></left>
+<form>
+        <input type="radio" name="choice" value="petrol"> Petrol<br>
+        <input type="radio" name="choice" value="diesel"> Diesel<br>
+        <input type="button" id="btn" value="Search">
+    </form>
+    <script>
+        const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs =document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_fuel.html#11";
+                    break;
+                }
+               else
+                  {
+                        window.location="file:///C:/Users/Sathi/OneDrive/Desktop/CIP%20FINAL/Car-Price-Prediction-master%20V0.3/Car-Price-Prediction-master/templates/spec_fuel.html#22";
+                    break;   
+                   }
+            }
+            
+        };
+    </script>
+
+
+<left><h3>By Brand</h3></left>
+<SELECT id="s2" NAME="section" onChange="SelectRedirect1();">
+<Option value="">Select Brand Name</option>
+<Option value="Maruti">Maruti</option>
+<Option value="Hyundai">Hyundai</option>
+<Option value="Honda">Honda</option>
+<Option value="Tata">Tata</option>
+<Option value="Mahindra">Mahindra</option>
+<Option value="Renault">Renault</option>
+<Option value="Ford">Ford</option>
+</SELECT>
+
+
+<left><h3>By Mileage</h3></left>
+<SELECT id="s3" NAME="section" onChange="SelectRedirect2();">
+<Option value="">Select Mileage Range</option>
+<Option value="Below 15">Below 15kmpl</option>
+<Option value="15-20">15-20 kmpl</option>
+<Option value="20-25">20-25kmpl</option>
+<Option value="25-30">25-30kmpl</option>
+<Option value="30-35">30-35km/kg</option>
+</SELECT>
+
+<left><h3>By Body Type</h3></left>
+<SELECT id="p1" NAME="section" onChange="SelectRedirect11();">
+<Option value="">Select Body Type</option>
+<Option value="Hatchback">Hatchback</option>
+<Option value="Sedan">Sedan</option>
+<Option value="SUV">SUV</option>
+<Option value="MUV">MUV</option>
+</SELECT>
+
+
+
+</div>
+
+
+  <div class="rightdiv">
+  <center><h2>Top 10 cars sold in India in March 2021</h2></center>
+<br><br>
+<div class="myDiv">
+  <left><h2> Maruti Suzuki Swift<br>Price: 5.73 Lakh</h2></left>
+   <img src="maruti suzuki swift.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>The Maruti Suzuki Swift continues to top the sales chart in consecutive succession. On 24 February, the company launched the 2021 Swift in India with fresh set of feature updates along with mild boost in power figures. This explains the 153 per cent sales growth for the Swift in India with 21,714 units sold in March 2021 as compared to 8,575 units sold in the same period last year. </p>
+<br><b>Engine:1197cc<br>Mileage:23.76kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br><br>
+<div class="myDiv">
+  <left><h2>Maruti Suzuki Baleno<br>Price:5.98-9.30 Lakh</h2></left>
+   <img src="maruti baleno.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>Maruti Suzuki Baleno emerges as the second bestseller in India last month with 21,217 unit sales as compared to 11,406 unit sales in March 2020, thereby registering 86 per cent growth in sales. Interestingly, the Baleno misses the pole position by just 497 units. As a matter of fact, cumulative sales figures for the Baleno and the Glanza would have surpassed the sales volume for the Swift. </p>
+<b>Engine:1197cc<br>Mileage:19.56kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br>
+<div class="myDiv">
+   <left><h2>Maruti Suzuki Alto<br>Price:2.99 - 4.60 Lakh</h2></left>
+  <img src="maruti alto.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+   <p>The entry-level product from Maruti Suzuki, the Alto was the top-seller for the longest time in India. This time around, for the second consecutive month Alto has slipped to the fourth rank. The company sold 18,757 units of the Alto hatchback in India last month as compared to 10,829 units in the same period last year, thereby witnessing a growth of 61 per cent. </p>
+<b><br>Engine:796cc<br>Mileage:22.05kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br>
+<div class="myDiv">
+   <left><h2>Hyundai Creta<br>Price: 9.99 - 17.67 Lakh</h2></left>
+  <img src="hyundai creta.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+    <p>Bestselling SUV, the Hyundai Creta has made it to the top five models sold in India last month. Hyundai sold 12,640 units of the Creta in India last month as compared to 6,706 unit sales in same period last year, thereby registering 88 per cent growth in sales. One of the reason behind its strong growth can be attributed to the new-generation model which was launched in India in March 2020. </p>
+<b><br>Engine:1353cc<br>Mileage:16.80kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br>
+<div class="myDiv">
+  <left><h2>Maruti Suzuki Eeco<br>Price:4.08 - 5.29 Lakh</h2></left>
+   <img src="maruti eeco.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>Maruti Suzuki Eeco has made it to the list of top 10 models sold in India last month due to its utilitarian benefits and has been particularly a popular choice with the commercial segment. The company sold 11,547 units of the Eeco in India last month as compared to 5,966 unit sales in the same period last year, thereby registering a 94 per cent growth in sales. </p>
+<b><br>Engine:1196 cc<br>Mileage:16.11 kmpl<br>Fuel_Type:CNG<br></b>
+</div>
+<br><br>
+<div class="myDiv">
+  <left><h2>Maruti Suzuki Dzire<br>Price:5.98 - 9.02Lakh</h2></left>
+   <img src="maruti dzire.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>The Dzire compact sedan from Maruti Suzuki is a popular name in its segment. This model has registered 109 per cent growth in sales last month with 11,434 unit sales as compared to 5,476 unit sales in the same period last year. The growth in sales might be a result of lucrative offers or discounts towards the end of the financial year. </p>
+<b><br>Engine:1197cc<br>Mileage:24.12kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br>
+<div class="myDiv">
+  <left><h2>Maruti Suzuki Vitara Brezza<br>Price: 7.51 - 11.41 Lakh</h2></left>
+<img src="maruti suzuki vitara brezza.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>Maruti Suzuki introduced the Brezza facelift with a petrol engine for the first time in India at the 2020 Auto Expo. This explains the 104 per cent rise in sales for the Vitara Brezza in India in March 2021. The company sold 11,274 units of this compact SUV in India last year as compared to 5,513 unit sales in the same period last year. </p>
+<b><br>Engine:1462cc<br>Mileage:18.76kmpl<br>Fuel_Type:Petrol</b><br>
+</div>
+<br><br>
+<div class="myDiv">
+  <left><h2>Hyundai Grand i10<br>Price: 9.99 - 17.67 Lakh</h2></left>
+<img src="hyundai grand i10.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>The Hyundai Grand i10 takes the ninth ranking in terms of sales with 11,020 units last month as compared to 4,293 units in March 2020. The Grand i10 witnesses the highest growth in sales of 157 per cent with 11,020 units sold in India last month as compared to 4,293 unit sales in March 2020. The strong growth can be attributed to stock clearance as the company had discontinued and removed the Grand i10 from its official website in January 2021.</p>
+<b><br>Engine:1186cc<br>Mileage:19.39-26.2kmpl<br>Fuel_Type:Diesel<br></b>
+</div>
+<br><br>
+<div class="myDiv">
+  <left><h2>Hyundai Venue<br>Price:6.92 - 11.76 Lakh</h2></left>
+<img src="hyndai venue.jpeg" alt="maruti suzuki swift" width="200" height="150" align="left"></td>
+  <p>Hyundai making it to the list of top 10 selling models in India in March 2021. Hyundai sold 10,722 units of the Venue in India last month as compared to 6,127 unit sales in the same period last year, thereby registering a 75 per cent growth in sales.</p>
+<b><br>Engine:998cc<br>Mileage:18.15 kmpl<br>Fuel_Type:Petrol<br></b>
+</div>
+<br><br>
+
+</div>
+    
+  
+</section>
+
+
+</body>
+</html>
